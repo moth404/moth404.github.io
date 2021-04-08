@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：电脑常识 - 冰冰的小屋</title>
+  <title>java基础语法(二) - 冰冰的小屋</title>
+  
+    <meta name="keywords" content="java">
   
 
+  
+    <meta name="description" content="java的简单的流程控制">
   
 
   <!-- feed -->
@@ -355,7 +357,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  focus' style="display: ;">
+        <div id="half" class='cover-wrapper post focus' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -418,166 +420,280 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        java基础语法(二)
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0117%2F521956a1j00qn2h4t00c8c000u000spm.jpg&thumbnail=650x2147483647&quality=80&type=jpg">
+    <p>M0th</p>
+  </a>
+</div>
+
           
         
           
-        
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/java/">java</a>
+    </a>
+  </div>
+
+
           
         
-      
-    
-    
-      
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年4月6日</p>
+  </a>
+</div>
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/05/06/linux%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/">
-        linux系统基础
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>当时学linux上来就是搭建环境，对linux很不熟悉，现在趁着hacker学习这个很好的资源把基础也补一下</p>
-    
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="java基础语法(二)" data-path="/2021/04/06/java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E4%BA%8C/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-05-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>java的简单的流程控制</p>
+<span id="more"></span>
+
+<h2 id="用户交互Scanner"><a href="#用户交互Scanner" class="headerlink" title="用户交互Scanner"></a>用户交互Scanner</h2><p>java.util.Scanner 是JAVA5开始的特性，可以通过Scanner类来获取用户的输入</p>
+<p><code>Scanner s =new Scanner(System.in); </code></p>
+<p>通过Scanner类的 next() 和 nextLine() 方法获取输入的字符串</p>
+<p>用 hasNext() 和 hasNextLine() 判断是否还有输入的数据</p>
+<blockquote>
+<p>next()与nextLine()区别</p>
+</blockquote>
+<p>next()</p>
+<ul>
+<li>一定要读取到有效字符串后才可以结束输入</li>
+<li>对输入有效字符之前遇到的空白，next()方法会自动将其去掉</li>
+<li>只有输入有效字符后才将其后面的空白作为分隔符或者结束符</li>
+<li>next()方法不能得到带有空格的字符串</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//从键盘接收数据</span></span><br><span class="line">        Scanner scanner =<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;使用next方式接收:&quot;</span>);</span><br><span class="line">        <span class="comment">//判断是否还有输入</span></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNext())&#123;</span><br><span class="line">            String str= scanner.next();</span><br><span class="line">            System.out.println(<span class="string">&quot;输出的内容&quot;</span>+str);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//凡是属于IO流的类如果不关闭会一直占用资源，用完就关掉</span></span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>nextLine()</p>
+<ul>
+<li>以Enter为结束符，也就是说 nextLine()方法返回的是输入回车之前的所有字符</li>
+<li>可以获得空白</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNext())&#123;</span><br><span class="line">            String str = scanner.nextLine();</span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>scanner输入一些数字类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo04</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//从键盘接收数据</span></span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">float</span> f = <span class="number">0.0F</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入整数:&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNextInt())&#123;</span><br><span class="line">            i = scanner.nextInt();</span><br><span class="line">            System.out.println(<span class="string">&quot;整数数据:&quot;</span>+i );</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;输入的不是整数数据&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;请输入小数:&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(scanner.hasNextFloat())&#123;</span><br><span class="line">            f =scanner.nextFloat();</span><br><span class="line">            System.out.println(<span class="string">&quot;小数数据:&quot;</span>+f);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;输入的不是小数数据&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo05</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//我们可以输入多个数字，并求其总和与平均数，每输入一个数字用回车确认，通过输入非数字来结束输入并输出执行结果：</span></span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">double</span> sum =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> m= <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 通过循环判断是否还有输入，并在里面对每一次进行求和和统计</span></span><br><span class="line">        <span class="keyword">while</span>(scanner.hasNextDouble())&#123;</span><br><span class="line">            <span class="keyword">double</span> x = scanner.nextDouble();</span><br><span class="line">            m = m+<span class="number">1</span>;</span><br><span class="line">            sum = sum +x;</span><br><span class="line">            System.out.println(<span class="string">&quot;你输入了第&quot;</span>+m+<span class="string">&quot;个数据，然后当前结果和为sum=&quot;</span>+sum);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(m+<span class="string">&quot;个数的平均值是&quot;</span>+sum/m);</span><br><span class="line">        scanner.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><hr>
+<h3 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h3><p>最基本的结构，没啥好说的，一行一行执行而已</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> struct;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h3><ol>
+<li><p>if 单选择结构</p>
+<blockquote>
+<p>if(布尔表达式){</p>
+<p>​    //如果布尔表达式为true将执行的语句</p>
+<p>}</p>
+</blockquote>
+</li>
+<li><p>if双选择结构</p>
+<blockquote>
+<p>if(布尔表达式){</p>
+<p>​    //如果布尔表达式的值为true</p>
+<p>}else{</p>
+<p>​    //如果布尔表达式的值为false</p>
+<p>}</p>
+</blockquote>
+</li>
+<li><p>if多选择结构</p>
+<blockquote>
+<p>if(布尔表达式 1){</p>
+<p>​    //如果布尔表达式1 的值为 true</p>
+<p>}else if(布尔表达式 2){</p>
+<p>​    //如果布尔表达式 2的值为 true</p>
+<p>}else if(布尔表达式 3){</p>
+<p>​    //如果布尔表达式 3的值为 true</p>
+<p>}else{</p>
+<p>​    //如果以上布尔表达式都不为true 则执行</p>
+<p>}</p>
+</blockquote>
+</li>
+<li><p>switch 多选择结构</p>
+<blockquote>
+<ul>
+<li>byte、short、int 或 char</li>
+<li>从 Java SE 7开始switch 支持字符串String 类型 同时case 标签必须为字符串常量</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> struct;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo05</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String name = <span class="string">&quot;狂神&quot;</span>;</span><br><span class="line">        <span class="keyword">switch</span>(name)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;M0th&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;M0th&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;狂神&quot;</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;狂神&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;无了无了&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过反编译发现，这个特性本身是将字符串转成hashcode然后做正常switch操作、</p>
+<p><img src="/2021/04/06/java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E4%BA%8C/image-20210407202403977.png" class="lazyload" data-srcset="/2021/04/06/java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E4%BA%8C/image-20210407202403977.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210407202403977"></p>
+</li>
+</ol>
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><blockquote>
+<p>while(布尔表达式){</p>
+<p>​    //循环内容</p>
+<p>}</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> struct;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo07</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//输出 1-100</span></span><br><span class="line">        <span class="keyword">int</span> i =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;<span class="number">100</span>)&#123;</span><br><span class="line">            sum=i+sum;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h4><p>至少循环一次</p>
+<blockquote>
+<p>do{</p>
+<p>​    //代码语句</p>
+<p>}while(布尔表达式)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> struct;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo09</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(a&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(a);</span><br><span class="line">            a --;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;============&quot;</span>);</span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">            System.out.println(a);</span><br><span class="line">            a++;</span><br><span class="line">        &#125;<span class="keyword">while</span>(a&lt;<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h4><p>for循环语句是支持迭代的一种通用结构，是最有效、最灵活的循环结构</p>
+<p>for循环执行的次数是执行前就确定的</p>
+<blockquote>
+<p>for(初始化; 布尔表达式; 更新){</p>
+<p>​    //代码语句</p>
+<p>}</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> struct;</span><br><span class="line"><span class="comment">//分别求100以内奇数和偶数的和</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> oddSum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> evenSum= <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%<span class="number">2</span>!=<span class="number">0</span>)&#123; <span class="comment">//奇数</span></span><br><span class="line">                oddSum+=i;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123; <span class="comment">//偶数</span></span><br><span class="line">                evenSum+=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;奇数的和:&quot;</span>+ oddSum);</span><br><span class="line">        System.out.println(<span class="string">&quot;偶数的和:&quot;</span>+evenSum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> struct;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo11</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 用while 或者 for循环输出1-1000之间能被5整除的数字，每行三个</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i&lt;=<span class="number">1000</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%<span class="number">5</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                System.out.print(i+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(i%<span class="number">15</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//println 输出完换行</span></span><br><span class="line">        <span class="comment">//print 输出完不换行</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> struct;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo12</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">9</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= j; i++) &#123;</span><br><span class="line">                System.out.print(j+<span class="string">&quot;*&quot;</span>+i+<span class="string">&quot;=&quot;</span>+(j*i)+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">1*1=1	</span></span><br><span class="line"><span class="comment">2*1=2	2*2=4	</span></span><br><span class="line"><span class="comment">3*1=3	3*2=6	3*3=9	</span></span><br><span class="line"><span class="comment">4*1=4	4*2=8	4*3=12	4*4=16	</span></span><br><span class="line"><span class="comment">5*1=5	5*2=10	5*3=15	5*4=20	5*5=25	</span></span><br><span class="line"><span class="comment">6*1=6	6*2=12	6*3=18	6*4=24	6*5=30	6*6=36	</span></span><br><span class="line"><span class="comment">7*1=7	7*2=14	7*3=21	7*4=28	7*5=35	7*6=42	7*7=49	</span></span><br><span class="line"><span class="comment">8*1=8	8*2=16	8*3=24	8*4=32	8*5=40	8*6=48	8*7=56	8*8=64	</span></span><br><span class="line"><span class="comment">9*1=9	9*2=18	9*3=27	9*4=36	9*5=45	9*6=54	9*7=63	9*8=72	9*9=81	</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/05/06/linux%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2021/04/06/java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E4%BA%8C/>http://example.com/2021/04/06/java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E4%BA%8C/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-07T22:04:24+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年4月7日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/04/29/windows%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/">
-        windows系统基础
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>windows经常用，但是对于一些注册表还有环境变量都不是很熟悉，趁hacker学习这个号的资源，学一下</p>
-    
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>java</p></a></div>
+
+
+        
+      
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-04-29</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2020/04/29/windows%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/'>
-            阅读全文
-          </a>
-        </div>
+      
+        <a class='next' href='/2021/03/28/java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/'>
+          <p class='title'>java基础语法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+注释注释是一种非常好的习惯
+
+单行注释  //
+
+多行注释
+123/*hahahaha*/
+文档注释
+1234/** * @Description HelloWorld * @Author ...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/03/20/%E4%BF%AE%E7%94%B5%E8%84%91%E8%AE%B0%E5%BD%95/">
-        修电脑记录
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>好多次帮同学解决电脑了，后来想想不如把这个经历写成一个文档，自己翻或者直接把文档给同学也方便</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-03-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020/03/20/%E4%BF%AE%E7%94%B5%E8%84%91%E8%AE%B0%E5%BD%95/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -585,299 +701,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0117%2F521956a1j00qn2h4t00c8c000u000spm.jpg&thumbnail=650x2147483647&quality=80&type=jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-          <p>无知和弱小不是生存障碍，傲慢才是</p>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1757186769@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/moth404/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/ctf-Write-up/" href="/categories/ctf-Write-up/"
-            id="categoriesctf-Write-up"
-            ><div class='name'>ctf-Write up</div><div class='badge'>(31)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/ctf-tools/" href="/categories/ctf-tools/"
-            id="categoriesctf-tools"
-            ><div class='name'>ctf-tools</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/java/" href="/categories/java/"
-            id="categoriesjava"
-            ><div class='name'>java</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" href="/categories/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/"
-            id="categoriesjavaE5ADA6E4B9A0E4B98BE8B7AF"
-            ><div class='name'>java学习之路</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/linux%E8%BF%90%E7%BB%B4/" href="/categories/linux%E8%BF%90%E7%BB%B4/"
-            id="categorieslinuxE8BF90E7BBB4"
-            ><div class='name'>linux运维</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/web%E6%BC%8F%E6%B4%9E%E7%AC%94%E8%AE%B0/" href="/categories/web%E6%BC%8F%E6%B4%9E%E7%AC%94%E8%AE%B0/"
-            id="categorieswebE6BC8FE6B49EE7AC94E8AEB0"
-            ><div class='name'>web漏洞笔记</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            id="categoriesE6B897E9808FE6B58BE8AF95E5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>渗透测试学习笔记</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" href="/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"
-            id="categoriesE6BC8FE6B49EE5A48DE78EB0"
-            ><div class='name'>漏洞复现</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"
-            id="categoriesE78EAFE5A283E690ADE5BBBA"
-            ><div class='name'>环境搭建</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%94%A8python%E8%A7%A3%E5%86%B3%E7%AE%97%E6%B3%95%E8%B0%9C%E9%A2%98/" href="/categories/%E7%94%A8python%E8%A7%A3%E5%86%B3%E7%AE%97%E6%B3%95%E8%B0%9C%E9%A2%98/"
-            id="categoriesE794A8pythonE8A7A3E586B3E7AE97E6B395E8B09CE9A298"
-            ><div class='name'>用python解决算法谜题</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"
-            id="categoriesE8AEA1E7AE97E69CBAE59FBAE7A180"
-            ><div class='name'>计算机基础</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92Scanner"><span class="toc-text">用户交互Scanner</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84"><span class="toc-text">结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="toc-text">顺序结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84"><span class="toc-text">选择结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF"><span class="toc-text">while循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do%E2%80%A6while%E5%BE%AA%E7%8E%AF"><span class="toc-text">do…while循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for-%E5%BE%AA%E7%8E%AF"><span class="toc-text">for 循环</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/CSRF/" style="font-size: 14px; color: #999">CSRF</a> <a href="/tags/RCE/" style="font-size: 14px; color: #999">RCE</a> <a href="/tags/XSS/" style="font-size: 14px; color: #999">XSS</a> <a href="/tags/XXE/" style="font-size: 14px; color: #999">XXE</a> <a href="/tags/bool%E7%9B%B2%E6%B3%A8/" style="font-size: 14px; color: #999">bool盲注</a> <a href="/tags/bypass/" style="font-size: 17.33px; color: #828282">bypass</a> <a href="/tags/ciscn/" style="font-size: 14px; color: #999">ciscn</a> <a href="/tags/ctf-web/" style="font-size: 24px; color: #555">ctf-web</a> <a href="/tags/docker/" style="font-size: 20.67px; color: #6c6c6c">docker</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/http%E8%B5%B0%E7%A7%81%E6%94%BB%E5%87%BB/" style="font-size: 14px; color: #999">http走私攻击</a> <a href="/tags/java/" style="font-size: 19px; color: #777">java</a> <a href="/tags/md5%E5%BC%B1%E7%9B%B8%E7%AD%89/" style="font-size: 14px; color: #999">md5弱相等</a> <a href="/tags/md5%E5%BC%BA%E7%A2%B0%E6%92%9E/" style="font-size: 14px; color: #999">md5强碰撞</a> <a href="/tags/misc/" style="font-size: 14px; color: #999">misc</a> <a href="/tags/nginx/" style="font-size: 14px; color: #999">nginx</a> <a href="/tags/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" style="font-size: 15.67px; color: #8e8e8e">php伪协议</a> <a href="/tags/php%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/" style="font-size: 14px; color: #999">php字符串解析漏洞</a> <a href="/tags/php%E6%BC%8F%E6%B4%9E/" style="font-size: 14px; color: #999">php漏洞</a> <a href="/tags/session%E4%BC%AA%E9%80%A0/" style="font-size: 14px; color: #999">session伪造</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 22.33px; color: #606060">sql注入</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5%E6%B4%BE%E7%94%9F%E8%A1%A8%E5%88%A9%E7%94%A8/" style="font-size: 14px; color: #999">sql注入派生表利用</a> <a href="/tags/ssrf/" style="font-size: 15.67px; color: #8e8e8e">ssrf</a> <a href="/tags/unicode%E6%AC%BA%E9%AA%97/" style="font-size: 14px; color: #999">unicode欺骗</a> <a href="/tags/web/" style="font-size: 14px; color: #999">web</a> <a href="/tags/web%E5%AE%89%E5%85%A8/" style="font-size: 14px; color: #999">web安全</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" style="font-size: 14px; color: #999">信息收集</a> <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" style="font-size: 17.33px; color: #828282">反序列化</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" style="font-size: 14px; color: #999">命令执行</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E7%BB%95%E8%BF%87/" style="font-size: 14px; color: #999">命令执行绕过</a> <a href="/tags/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/" style="font-size: 14px; color: #999">堆叠注入</a> <a href="/tags/%E5%AD%97%E5%85%B8%E5%88%B6%E4%BD%9C/" style="font-size: 14px; color: #999">字典制作</a> <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" style="font-size: 17.33px; color: #828282">文件上传</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" style="font-size: 15.67px; color: #8e8e8e">文件包含</a> <a href="/tags/%E6%9A%B4%E7%A0%B4/" style="font-size: 14px; color: #999">暴破</a> <a href="/tags/%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/" style="font-size: 14px; color: #999">源码泄露</a> <a href="/tags/%E7%94%B5%E8%84%91%E5%B8%B8%E8%AF%86/" style="font-size: 17.33px; color: #828282">电脑常识</a> <a href="/tags/%E7%AD%BE%E5%88%B0%E9%A2%98/" style="font-size: 14px; color: #999">签到题</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/" style="font-size: 19px; color: #777">算法入门</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 14px; color: #999">计算机网络</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>65 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2020/01/01'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Thu Apr 08 2021 17:30:04 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-04-08 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-04-08 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -886,8 +731,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="java基础语法(二)";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
