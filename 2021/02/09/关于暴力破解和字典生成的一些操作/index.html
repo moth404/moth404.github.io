@@ -538,7 +538,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2021/02/09/%E5%85%B3%E4%BA%8E%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E5%92%8C%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%93%8D%E4%BD%9C/>http://example.com/2021/02/09/%E5%85%B3%E4%BA%8E%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E5%92%8C%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%93%8D%E4%BD%9C/</a></p>
+                <p>本文永久链接是：<a href=http://m0th.top/2021/02/09/%E5%85%B3%E4%BA%8E%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E5%92%8C%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%93%8D%E4%BD%9C/>http://m0th.top/2021/02/09/%E5%85%B3%E4%BA%8E%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E5%92%8C%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%80%E4%BA%9B%E6%93%8D%E4%BD%9C/</a></p>
               
             
           </blockquote>
@@ -1402,7 +1402,7 @@ function setSearchService() {
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://M0th.top' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1420,7 +1420,7 @@ function setSearchService() {
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://M0th.top' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1442,7 +1442,7 @@ function setSearchService() {
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
+          var url = 'http://M0th.top' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增

@@ -496,7 +496,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h3><p>不断更改构造成这副样子即可绕过限制</p>
 <p><img src="/2021/04/10/GXYCTF2019-babyUpload/image-20210410121833686.png" class="lazyload" data-srcset="/2021/04/10/GXYCTF2019-babyUpload/image-20210410121833686.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210410121833686"></p>
-<p>我们还需要上传一个.htaccess实现解析，其原理查看<a target="_blank" rel="noopener" href="http://m0th.top/2021/02/03/%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81bypass/">http://m0th.top/2021/02/03/%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81bypass/</a></p>
+<p>我们还需要上传一个.htaccess实现解析，其原理查看<a href="http://m0th.top/2021/02/03/%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81bypass/">http://m0th.top/2021/02/03/%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81bypass/</a></p>
 <p><img src="/2021/04/10/GXYCTF2019-babyUpload/image-20210410122208236.png" class="lazyload" data-srcset="/2021/04/10/GXYCTF2019-babyUpload/image-20210410122208236.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210410122208236"><img src="/2021/04/10/GXYCTF2019-babyUpload/image-20210410122417308.png" class="lazyload" data-srcset="/2021/04/10/GXYCTF2019-babyUpload/image-20210410122417308.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210410122417308"></p>
 <h4 id="脚本实现自动化"><a href="#脚本实现自动化" class="headerlink" title="脚本实现自动化"></a>脚本实现自动化</h4><p>根据主办方wp的写法，学习到了如何通过python脚本实现自动化文件上传</p>
 <p>python的request库传文件</p>
@@ -523,7 +523,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2021/04/10/GXYCTF2019-babyUpload/>http://example.com/2021/04/10/GXYCTF2019-babyUpload/</a></p>
+                <p>本文永久链接是：<a href=http://m0th.top/2021/04/10/GXYCTF2019-babyUpload/>http://m0th.top/2021/04/10/GXYCTF2019-babyUpload/</a></p>
               
             
           </blockquote>
@@ -1374,7 +1374,7 @@ function setSearchService() {
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://M0th.top' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1392,7 +1392,7 @@ function setSearchService() {
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://M0th.top' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1414,7 +1414,7 @@ function setSearchService() {
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
+          var url = 'http://M0th.top' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
