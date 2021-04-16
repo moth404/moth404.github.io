@@ -24,6 +24,8 @@
   
   <title>java面向对象 - 冰冰的小屋</title>
   
+    <meta name="keywords" content="java">
+  
 
   
 
@@ -444,6 +446,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/">java学习之路</a>
+    </a>
+  </div>
+
 
           
         
@@ -480,7 +489,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  
+  <span id="more"></span>
+
+<h3 id="初始面向对象"><a href="#初始面向对象" class="headerlink" title="初始面向对象"></a>初始面向对象</h3><h4 id="面向对象-amp-面向过程"><a href="#面向对象-amp-面向过程" class="headerlink" title="面向对象 &amp; 面向过程"></a>面向对象 &amp; 面向过程</h4><p>面向过程</p>
+<ul>
+<li>步骤清晰，顺序执行</li>
+<li>面对过程适合处理一些较为简单的问题</li>
+</ul>
+<p>面向对象</p>
+<ul>
+<li>分类的思想木事，思考问题首先结局问题需要分成哪些类，然后对这些分类独立思考。分类下的细节还是通过面向过程的思索。</li>
+<li>对于描述复杂的事物，为了从宏观上把握、从整体上合理分析，我们需要使用面向对象的思路来分析整个系统。但是，具体到微观操作，仍然需要面对过程的思路去处理</li>
+</ul>
+<h4 id="面向对象编程（Object-Oriented-Programming-OOP）"><a href="#面向对象编程（Object-Oriented-Programming-OOP）" class="headerlink" title="面向对象编程（Object-Oriented Programming, OOP）"></a>面向对象编程（Object-Oriented Programming, OOP）</h4><p>本质是：以类的方式组织代码，以对象的方式组织(封装)数据</p>
+<p>面向对象三大特性： <strong>封装、继承、多态</strong></p>
+<p>类是对象的模板，是对对象的抽象</p>
+<h3 id="类与对象的创建"><a href="#类与对象的创建" class="headerlink" title="类与对象的创建"></a>类与对象的创建</h3><p>类是一种抽象的数据类型，它是对某一类事物整体描述/定义，但并不代表某一个具体的事物</p>
+<p>对象是抽象概念的具体实例</p>
+<p>使用new关键字来创建对象</p>
+<p>使用new关键字创建的时候，除了分配内存空间，还会给创建好的对象进行默认的初始化以及对类中的构造器的调用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> oop.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">//学生类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="comment">//属性：字段</span></span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;这是一个学生&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> oop.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">//一个项目应该只有一个mian类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//类:抽象的，实例化</span></span><br><span class="line">        <span class="comment">//类实例化后会返回一个自己的对象</span></span><br><span class="line">        <span class="comment">//student对象就是一个Student类的具体实例</span></span><br><span class="line"></span><br><span class="line">        Student xiaoming= <span class="keyword">new</span> Student();</span><br><span class="line">        Student xh = <span class="keyword">new</span> Student();</span><br><span class="line">        xiaoming.age =<span class="number">18</span>;</span><br><span class="line">        xiaoming.name = <span class="string">&quot;小明&quot;</span>;</span><br><span class="line">        System.out.println(xiaoming.name);</span><br><span class="line">        System.out.println(xiaoming.age);</span><br><span class="line"></span><br><span class="line">        xh.name = <span class="string">&quot;小红&quot;</span>;</span><br><span class="line">        xh.age =<span class="number">3</span>;</span><br><span class="line">        System.out.println(xh.name);</span><br><span class="line">        System.out.println(xh.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/04/11/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20210416211236473.png" class="lazyload" data-srcset="/2021/04/11/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20210416211236473.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210416211236473"></p>
+<h3 id="构造器详解"><a href="#构造器详解" class="headerlink" title="构造器详解"></a>构造器详解</h3><p>构造器也称为构造方法，是在创建对象的时候必须要调用的，有以下两个特点:</p>
+<ul>
+<li>必须和类的名字相同</li>
+<li>必须没有返回类型，也不能写void</li>
+</ul>
+<p>作用：</p>
+<ul>
+<li>new本质在调用构造方法</li>
+<li>初始化对象的属性值</li>
+</ul>
+<p>注意点：定义了有参构造后，如果想使用无参构造，需要显示定义一个无参的构造器</p>
+<p><strong>快捷键：alt + insert</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> oop.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">//一个项目应该只有一个mian类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//new 实例化了一个对象</span></span><br><span class="line">        Person person = <span class="keyword">new</span> Person(<span class="string">&quot;hahah&quot;</span>);</span><br><span class="line">        System.out.println(person.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> oop.demo01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="comment">//一个类即使什么都不写，它也会存在一个构造方法</span></span><br><span class="line">    <span class="comment">//显示的定义构造器</span></span><br><span class="line">    String name;</span><br><span class="line">    <span class="comment">//实例化初始值</span></span><br><span class="line">    <span class="comment">//1.使用new关键字，本质在调用构造器</span></span><br><span class="line">    <span class="comment">//2.用来初始化值</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = <span class="string">&quot;M0th&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//有参构造，一旦定义了有参构造，无参就必须显示定义</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建对象简单内存分析"><a href="#创建对象简单内存分析" class="headerlink" title="创建对象简单内存分析"></a>创建对象简单内存分析</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> oop.demo02;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pet</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="comment">//无参构造</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shout</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;叫了一声&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> oop;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> oop.demo02.Pet;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Pet dog = <span class="keyword">new</span> Pet();</span><br><span class="line">        dog.name = <span class="string">&quot;旺财&quot;</span>;</span><br><span class="line">        dog.age = <span class="number">3</span>;</span><br><span class="line">        dog.shout();</span><br><span class="line"></span><br><span class="line">        System.out.println(dog.name);</span><br><span class="line">        System.out.println(dog.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/04/11/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20210416220452571.png" class="lazyload" data-srcset="/2021/04/11/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image-20210416220452571.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210416220452571"></p>
+
   
   
     
@@ -514,10 +568,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-11T17:35:26+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-16T22:05:58+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年4月11日</p>
+    <p>更新于：2021年4月16日</p>
   </a>
 </div>
 
@@ -525,6 +579,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>java</p></a></div>
+
 
         
       
@@ -578,6 +635,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">初始面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-amp-%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B"><span class="toc-text">面向对象 &amp; 面向过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88Object-Oriented-Programming-OOP%EF%BC%89"><span class="toc-text">面向对象编程（Object-Oriented Programming, OOP）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-text">类与对象的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="toc-text">构造器详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%AE%80%E5%8D%95%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90"><span class="toc-text">创建对象简单内存分析</span></a></li></ol>
+    </div>
+  </section>
 
 
   
