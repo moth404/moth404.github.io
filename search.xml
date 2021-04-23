@@ -8,7 +8,7 @@
       <link href="2021/04/23/test/"/>
       <url>2021/04/23/test/</url>
       
-        <content type="html"><![CDATA[<p>haha</p><span id="more"></span><ol><li>“<script>alert(document.domain);</script><b>“</b></li><li>test</li></ol><p>这只是个测试</p>]]></content>
+        <content type="html"><![CDATA[<p>haha</p><span id="more"></span><script>alert(document.domain);</script><p>这只是个测试</p>]]></content>
       
       
       
