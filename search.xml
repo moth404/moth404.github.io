@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="2021/04/23/test/"/>
-      <url>2021/04/23/test/</url>
-      
-        <content type="html"><![CDATA[<p>haha</p><span id="more"></span><script>alert(document.domain);</script><p>这只是个测试</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>java异常处理</title>
       <link href="2021/04/21/java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
       <url>2021/04/21/java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
