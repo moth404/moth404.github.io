@@ -8,7 +8,7 @@
       <link href="2021/04/23/test/"/>
       <url>2021/04/23/test/</url>
       
-        <content type="html"><![CDATA[<p>haha</p><span id="more"></span><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.domain);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>&quot;</span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><p>这只是个测试</p>]]></content>
+        <content type="html"><![CDATA[<p>haha</p><span id="more"></span><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="built_in">document</span>.domain);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>&quot;</span><br></pre></td></tr></table></figure><ol><li><pre><code class="html"></code></pre></li></ol><p>这只是个测试</p>]]></content>
       
       
       
