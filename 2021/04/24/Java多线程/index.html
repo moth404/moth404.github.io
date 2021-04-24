@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2021/3 - 冰冰的小屋</title>
+  <title>Java多线程 - 冰冰的小屋</title>
+  
+    <meta name="keywords" content="多线程">
   
 
   
@@ -355,7 +355,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  focus' style="display: ;">
+        <div id="half" class='cover-wrapper post focus' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -419,123 +419,168 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
+    
+      <h1 class="title">
+        Java多线程
+      </h1>
+      <div class='new-meta-box'>
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/04/MRCTF2020-%E4%BD%A0%E4%BC%A0%E4%BD%A0%E9%A9%AC%E5%91%A2/">
-        [MRCTF2020]你传你🐎呢
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>很基础的双文件上传绕过,通过上传.htaccess使得全目录被当做php解析</p>
-    
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0117%2F521956a1j00qn2h4t00c8c000u000spm.jpg&thumbnail=650x2147483647&quality=80&type=jpg">
+    <p>M0th</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/">Java学习之路</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-03-04</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年4月24日</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/ctf-Write-up/">ctf-Write up</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Java多线程" data-path="/2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <h3 id="线程简介"><a href="#线程简介" class="headerlink" title="线程简介"></a>线程简介</h3><h3 id="线程实现"><a href="#线程实现" class="headerlink" title="线程实现"></a>线程实现</h3><h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3><h3 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h3><h3 id="线程通信问题"><a href="#线程通信问题" class="headerlink" title="线程通信问题"></a>线程通信问题</h3><h3 id="高级主题"><a href="#高级主题" class="headerlink" title="高级主题"></a>高级主题</h3>
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/03/04/MRCTF2020-%E4%BD%A0%E4%BC%A0%E4%BD%A0%E9%A9%AC%E5%91%A2/'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://m0th.top/2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/>http://m0th.top/2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-24T16:37:59+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年4月24日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/03/buuctf-misc%E7%9A%84%E8%A7%A3%E9%A2%98%E8%BF%87%E7%A8%8B/">
-        buuctf-misc的解题过程
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>刷一些misc，buu走起</p>
-    
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>多线程</p></a></div>
+
+
+        
+      
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/ctf-Write-up/">ctf-Write up</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2021/03/03/buuctf-misc%E7%9A%84%E8%A7%A3%E9%A2%98%E8%BF%87%E7%A8%8B/'>
-            阅读全文
-          </a>
-        </div>
+      
+        <a class='next' href='/2021/04/21/java%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/'>
+          <p class='title'>java异常处理<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>异常抛出处理，还有常见的异常学习
+
+
+Error 与 Exception程序在运行过程中，可能会遇到一些意外问题，我们称之为异常，英文是：Exception，意思是例外。
+异常指程序运行中出现的...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2021/03/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          2 / 2
-        </p>
-        
-      </div>
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -543,299 +588,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0117%2F521956a1j00qn2h4t00c8c000u000spm.jpg&thumbnail=650x2147483647&quality=80&type=jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-          <p>无知和弱小不是生存障碍，傲慢才是</p>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1757186769@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/moth404/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" href="/categories/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/"
-            id="categoriesJavaE5ADA6E4B9A0E4B98BE8B7AF"
-            ><div class='name'>Java学习之路</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/ctf-Write-up/" href="/categories/ctf-Write-up/"
-            id="categoriesctf-Write-up"
-            ><div class='name'>ctf-Write up</div><div class='badge'>(33)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/ctf-tools/" href="/categories/ctf-tools/"
-            id="categoriesctf-tools"
-            ><div class='name'>ctf-tools</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" href="/categories/java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/"
-            id="categoriesjavaE5ADA6E4B9A0E4B98BE8B7AF"
-            ><div class='name'>java学习之路</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/linux%E8%BF%90%E7%BB%B4/" href="/categories/linux%E8%BF%90%E7%BB%B4/"
-            id="categorieslinuxE8BF90E7BBB4"
-            ><div class='name'>linux运维</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/web%E6%BC%8F%E6%B4%9E%E7%AC%94%E8%AE%B0/" href="/categories/web%E6%BC%8F%E6%B4%9E%E7%AC%94%E8%AE%B0/"
-            id="categorieswebE6BC8FE6B49EE7AC94E8AEB0"
-            ><div class='name'>web漏洞笔记</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            id="categoriesE6B897E9808FE6B58BE8AF95E5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>渗透测试学习笔记</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" href="/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"
-            id="categoriesE6BC8FE6B49EE5A48DE78EB0"
-            ><div class='name'>漏洞复现</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"
-            id="categoriesE78EAFE5A283E690ADE5BBBA"
-            ><div class='name'>环境搭建</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%94%A8python%E8%A7%A3%E5%86%B3%E7%AE%97%E6%B3%95%E8%B0%9C%E9%A2%98/" href="/categories/%E7%94%A8python%E8%A7%A3%E5%86%B3%E7%AE%97%E6%B3%95%E8%B0%9C%E9%A2%98/"
-            id="categoriesE794A8pythonE8A7A3E586B3E7AE97E6B395E8B09CE9A298"
-            ><div class='name'>用python解决算法谜题</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"
-            id="categoriesE8AEA1E7AE97E69CBAE59FBAE7A180"
-            ><div class='name'>计算机基础</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="toc-text">线程简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%9E%E7%8E%B0"><span class="toc-text">线程实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="toc-text">线程状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="toc-text">线程同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E9%97%AE%E9%A2%98"><span class="toc-text">线程通信问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E4%B8%BB%E9%A2%98"><span class="toc-text">高级主题</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/CSRF/" style="font-size: 14px; color: #999">CSRF</a> <a href="/tags/RCE/" style="font-size: 14px; color: #999">RCE</a> <a href="/tags/XSS/" style="font-size: 14px; color: #999">XSS</a> <a href="/tags/XXE/" style="font-size: 14px; color: #999">XXE</a> <a href="/tags/bool%E7%9B%B2%E6%B3%A8/" style="font-size: 14px; color: #999">bool盲注</a> <a href="/tags/bypass/" style="font-size: 17.33px; color: #828282">bypass</a> <a href="/tags/ciscn/" style="font-size: 14px; color: #999">ciscn</a> <a href="/tags/ctf-web/" style="font-size: 24px; color: #555">ctf-web</a> <a href="/tags/docker/" style="font-size: 20.67px; color: #6c6c6c">docker</a> <a href="/tags/git%E6%B3%84%E9%9C%B2/" style="font-size: 14px; color: #999">git泄露</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/http%E8%B5%B0%E7%A7%81%E6%94%BB%E5%87%BB/" style="font-size: 14px; color: #999">http走私攻击</a> <a href="/tags/java/" style="font-size: 20.67px; color: #6c6c6c">java</a> <a href="/tags/md5%E5%BC%B1%E7%9B%B8%E7%AD%89/" style="font-size: 14px; color: #999">md5弱相等</a> <a href="/tags/md5%E5%BC%BA%E7%A2%B0%E6%92%9E/" style="font-size: 14px; color: #999">md5强碰撞</a> <a href="/tags/misc/" style="font-size: 14px; color: #999">misc</a> <a href="/tags/nginx/" style="font-size: 14px; color: #999">nginx</a> <a href="/tags/php%E4%BC%AA%E5%8D%8F%E8%AE%AE/" style="font-size: 15.67px; color: #8e8e8e">php伪协议</a> <a href="/tags/php%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/" style="font-size: 14px; color: #999">php字符串解析漏洞</a> <a href="/tags/php%E6%BC%8F%E6%B4%9E/" style="font-size: 14px; color: #999">php漏洞</a> <a href="/tags/session%E4%BC%AA%E9%80%A0/" style="font-size: 14px; color: #999">session伪造</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 22.33px; color: #606060">sql注入</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5%E6%B4%BE%E7%94%9F%E8%A1%A8%E5%88%A9%E7%94%A8/" style="font-size: 14px; color: #999">sql注入派生表利用</a> <a href="/tags/ssrf/" style="font-size: 15.67px; color: #8e8e8e">ssrf</a> <a href="/tags/unicode%E6%AC%BA%E9%AA%97/" style="font-size: 14px; color: #999">unicode欺骗</a> <a href="/tags/web/" style="font-size: 14px; color: #999">web</a> <a href="/tags/web%E5%AE%89%E5%85%A8/" style="font-size: 14px; color: #999">web安全</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" style="font-size: 14px; color: #999">信息收集</a> <a href="/tags/%E5%8F%8C%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" style="font-size: 14px; color: #999">双文件上传</a> <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" style="font-size: 17.33px; color: #828282">反序列化</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" style="font-size: 14px; color: #999">命令执行</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E7%BB%95%E8%BF%87/" style="font-size: 14px; color: #999">命令执行绕过</a> <a href="/tags/%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/" style="font-size: 14px; color: #999">堆叠注入</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 14px; color: #999">多线程</a> <a href="/tags/%E5%AD%97%E5%85%B8%E5%88%B6%E4%BD%9C/" style="font-size: 14px; color: #999">字典制作</a> <a href="/tags/%E5%BC%82%E5%B8%B8/" style="font-size: 14px; color: #999">异常</a> <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" style="font-size: 17.33px; color: #828282">文件上传</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" style="font-size: 15.67px; color: #8e8e8e">文件包含</a> <a href="/tags/%E6%97%A0%E5%8F%82%E6%95%B0rce/" style="font-size: 14px; color: #999">无参数rce</a> <a href="/tags/%E6%9A%B4%E7%A0%B4/" style="font-size: 14px; color: #999">暴破</a> <a href="/tags/%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/" style="font-size: 14px; color: #999">源码泄露</a> <a href="/tags/%E7%94%B5%E8%84%91%E5%B8%B8%E8%AF%86/" style="font-size: 17.33px; color: #828282">电脑常识</a> <a href="/tags/%E7%AD%BE%E5%88%B0%E9%A2%98/" style="font-size: 14px; color: #999">签到题</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8/" style="font-size: 19px; color: #777">算法入门</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 14px; color: #999">计算机网络</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fas fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>70 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2020/01/01'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Sat Apr 24 2021 16:38:30 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2021-04-24 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-04-24 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -844,8 +618,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Java多线程";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
