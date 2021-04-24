@@ -8,7 +8,7 @@
       <link href="2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
       <url>2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h3 id="线程简介"><a href="#线程简介" class="headerlink" title="线程简介"></a>线程简介</h3><h4 id="多任务"><a href="#多任务" class="headerlink" title="多任务"></a>多任务</h4><p>看似是多个任务都在做，本质上其实还是同一时间做一件事情</p><h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><h3 id="线程实现（重点）"><a href="#线程实现（重点）" class="headerlink" title="线程实现（重点）"></a>线程实现（重点）</h3><h3 id="线程状"><a href="#线程状" class="headerlink" title="线程状"></a>线程状</h3><h3 id="线程同步（重点）"><a href="#线程同步（重点）" class="headerlink" title="线程同步（重点）"></a>线程同步（重点）</h3><h3 id="线程通信问题"><a href="#线程通信问题" class="headerlink" title="线程通信问题"></a>线程通信问题</h3><h3 id="高级主题"><a href="#高级主题" class="headerlink" title="高级主题"></a>高级主题</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="线程简介"><a href="#线程简介" class="headerlink" title="线程简介"></a>线程简介</h3><h4 id="多任务"><a href="#多任务" class="headerlink" title="多任务"></a>多任务</h4><p>多任务处理是指用户可以在同一时间内运行多个应用程序,每个应用程序被称作一个任务</p><p>看似是多个任务都在做，事实上处理器在某一时刻只会给一件任务提供服务</p><h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><h3 id="线程实现（重点）"><a href="#线程实现（重点）" class="headerlink" title="线程实现（重点）"></a>线程实现（重点）</h3><h3 id="线程状"><a href="#线程状" class="headerlink" title="线程状"></a>线程状</h3><h3 id="线程同步（重点）"><a href="#线程同步（重点）" class="headerlink" title="线程同步（重点）"></a>线程同步（重点）</h3><h3 id="线程通信问题"><a href="#线程通信问题" class="headerlink" title="线程通信问题"></a>线程通信问题</h3><h3 id="高级主题"><a href="#高级主题" class="headerlink" title="高级主题"></a>高级主题</h3>]]></content>
       
       
       <categories>
