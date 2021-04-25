@@ -491,7 +491,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <h3 id="线程简介"><a href="#线程简介" class="headerlink" title="线程简介"></a>线程简介</h3><h4 id="多任务"><a href="#多任务" class="headerlink" title="多任务"></a>多任务</h4><p>多任务处理是指用户可以在同一时间内运行多个应用程序,每个应用程序被称作一个任务</p>
 <p>看似是多个任务都在做，事实上处理器在某一时刻只会给一件任务提供服务</p>
-<h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><h3 id="线程实现（重点）"><a href="#线程实现（重点）" class="headerlink" title="线程实现（重点）"></a>线程实现（重点）</h3><h3 id="线程状"><a href="#线程状" class="headerlink" title="线程状"></a>线程状</h3><h3 id="线程同步（重点）"><a href="#线程同步（重点）" class="headerlink" title="线程同步（重点）"></a>线程同步（重点）</h3><h3 id="线程通信问题"><a href="#线程通信问题" class="headerlink" title="线程通信问题"></a>线程通信问题</h3><h3 id="高级主题"><a href="#高级主题" class="headerlink" title="高级主题"></a>高级主题</h3>
+<h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><p>通过下图对比看出</p>
+<p><img src="/2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/image-20210424204558624.png" class="lazyload" data-srcset="/2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/image-20210424204558624.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210424204558624"></p>
+<blockquote>
+<p>Process 和 Thread的区别</p>
+<p>进程，是执行程序的一次执行过程，动态的概念。是系统资源分配的戴单位</p>
+<p>通常一个进程包括若干个线程，一个进程至少有一个线程。线程是CPU调度和执行的单位</p>
+</blockquote>
+<p>注意事项：</p>
+<ul>
+<li>很多多线程是模拟出来的，真正的多线程是多个CPU，多核。</li>
+<li>模拟出来的多线程，即在一个cpu的情况下，在同一个时间点，cpu只能执行一个代码，只是因为切换的快，所以有同时执行的错觉</li>
+</ul>
+<p>线程是独立的执行路径</p>
+<p>在程序运行时，即使没有自己创建线程，后台也会有多个线程，如主线程，gc线程</p>
+<p>main()称之为主线程，为系统的入口，用于执行整个程序</p>
+<p>在一个进程中，如果开辟了多个线程，线程的运行有调度器安排调度，调度器与操作系统紧密相关，先后顺序是不能认为干预的</p>
+<p>对同一份资源操作时，会存在资源抢夺的问题，需要加入并发控制</p>
+<p>线程会带来额外的开销，如cpu调度时间，并发控制开销</p>
+<p>每个线程在自己的工作内存交互，内存控制不当会造成数据不一致</p>
+<h3 id="线程实现（重点）"><a href="#线程实现（重点）" class="headerlink" title="线程实现（重点）"></a>线程实现（重点）</h3><p><img src="/2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/image-20210424212747421.png" class="lazyload" data-srcset="/2021/04/24/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/image-20210424212747421.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210424212747421"></p>
+<h4 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h4><ul>
+<li>自定义线程类继承Thread类</li>
+<li>重写run()方法，编写线程执行体</li>
+<li>创建线程对象，调用start()方法启动线程</li>
+</ul>
+<h4 id="Runnable"><a href="#Runnable" class="headerlink" title="Runnable"></a>Runnable</h4><h4 id="Callable"><a href="#Callable" class="headerlink" title="Callable"></a>Callable</h4><h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3><h3 id="线程同步（重点）"><a href="#线程同步（重点）" class="headerlink" title="线程同步（重点）"></a>线程同步（重点）</h3><h3 id="线程通信问题"><a href="#线程通信问题" class="headerlink" title="线程通信问题"></a>线程通信问题</h3><h3 id="高级主题"><a href="#高级主题" class="headerlink" title="高级主题"></a>高级主题</h3>
   
   
     
@@ -525,10 +550,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-24T18:43:27+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-04-25T13:38:13+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年4月24日</p>
+    <p>更新于：2021年4月25日</p>
   </a>
 </div>
 
@@ -602,7 +627,7 @@ Error 与 Exception程序在运行过程中，可能会遇到一些意外问题�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="toc-text">线程简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1"><span class="toc-text">多任务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">多线程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%9E%E7%8E%B0%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-text">线程实现（重点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6"><span class="toc-text">线程状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-text">线程同步（重点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E9%97%AE%E9%A2%98"><span class="toc-text">线程通信问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E4%B8%BB%E9%A2%98"><span class="toc-text">高级主题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="toc-text">线程简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1"><span class="toc-text">多任务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">多线程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%9E%E7%8E%B0%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-text">线程实现（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Thread"><span class="toc-text">Thread</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Runnable"><span class="toc-text">Runnable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Callable"><span class="toc-text">Callable</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="toc-text">线程状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-text">线程同步（重点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E9%97%AE%E9%A2%98"><span class="toc-text">线程通信问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E4%B8%BB%E9%A2%98"><span class="toc-text">高级主题</span></a></li></ol>
     </div>
   </section>
 
